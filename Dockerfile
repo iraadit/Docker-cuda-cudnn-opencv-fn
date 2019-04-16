@@ -2,8 +2,8 @@ FROM nvidia/cuda:9.2-cudnn7-devel-ubuntu16.04
 MAINTAINER Renaud Bouckenooghe <iraadit@gmail.com>
 
 # Basic toolchain
-RUN apt-get update && \
-        apt-get install -y \
+RUN apt-get update && apt-get install -y \
+        apt-utils \
         build-essential \
         git \
         wget \
@@ -13,6 +13,7 @@ RUN apt-get update && \
         libcurl4-openssl-dev \
         zlib1g-dev \
         htop \
+        cmake \
         nano && \
     apt-get autoremove -y
 
